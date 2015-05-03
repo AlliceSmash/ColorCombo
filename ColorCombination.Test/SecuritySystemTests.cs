@@ -21,7 +21,6 @@ namespace ColorCombination.Test
             Assert.AreEqual<string>(expectedOutput, actualOutput);
         }
 
-
         [TestMethod]
         public void TestSecuritySys_FindMasterCombinationByG_ValidFailure()
         {
@@ -36,7 +35,6 @@ namespace ColorCombination.Test
             // Assert
             Assert.AreEqual<string>(expectedOutput, actualOutput);
         }
-
 
         [TestMethod]
         public void TestSecuritySys_FindMasterCombination_Success1()

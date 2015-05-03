@@ -57,8 +57,7 @@ namespace ColorCombination
                     //found combination,return the combination
                     return PrintColorCombination();
                 }
-
-                    return failureMsg;
+                return failureMsg;
             }
             else
             {
