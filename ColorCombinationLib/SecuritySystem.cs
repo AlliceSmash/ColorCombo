@@ -21,7 +21,7 @@ namespace ColorCombination
                 chips = new List<MyChip>(inputChip);
 
                 //modify the first chip and add the last chip
-                MyChip aChip = new MyChip(chips[0].Right, "");
+                var aChip = new MyChip { Left = chips[0].Right, Right = "" };
                 chips.Add(aChip);
                 chips[0].Right = chips[0].Left;
                 chips[0].Left = "";
@@ -31,10 +31,8 @@ namespace ColorCombination
                 dag.AddEdges(chips);
                 sortResults = new List<MyChip>();
             }
-           
-        }       
-         
-      
+        }
+
         /// <summary>
         /// to return a string with either color combination or failure message
         /// this method uses built-in chip color
