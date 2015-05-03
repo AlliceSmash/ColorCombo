@@ -18,10 +18,8 @@ namespace ColorCombination.Test
                     new MyChip(){Left="red", Right="green"},
                     new MyChip(){Left="yellow",Right="red"},
                     new MyChip(){Left="orange", Right="purple"} 
-                            
                 };
             }
-            
         }
 
         public static string FailureOutput
@@ -31,7 +29,6 @@ namespace ColorCombination.Test
                 return  failmsg;
             }
         }
-
 
         public static List<MyChip> Success1
         {
@@ -44,10 +41,9 @@ namespace ColorCombination.Test
                     new MyChip(){Left="red",Right="orange"},
                     new MyChip(){Left="red", Right="green"},
                     new MyChip(){Left="yellow",Right="red"},
-                    new MyChip(){Left="orange", Right="red"}      
+                    new MyChip(){Left="orange", Right="red"}
                 };
             }
-             
         }
 
         public static string SuccessExpectedOutput1
@@ -65,16 +61,14 @@ namespace ColorCombination.Test
                     new MyChip(){Left="blue", Right="green"},
                     new MyChip(){Left="blue", Right="yellow"},
                     new MyChip(){Left="green",Right="yellow"},
-                    new MyChip(){Left="orange", Right="red"} ,
+                    new MyChip(){Left="orange", Right="red"},
                     new MyChip(){Left="red", Right="green"},
-                    new MyChip(){Left="red", Right="orange"} ,
+                    new MyChip(){Left="red", Right="orange"},
                     new MyChip(){Left="yellow",Right="blue"},
-                    new MyChip(){Left="yellow",Right="red"}    
+                    new MyChip(){Left="yellow",Right="red"}
                 };
             }
-             
         }
-
 
         public static string SuccessExpectedOutput2
         {
@@ -83,7 +77,6 @@ namespace ColorCombination.Test
                 return "blue, green\r\ngreen, yellow\r\nyellow, blue\r\nblue, yellow\r\nyellow, red\r\nred, orange\r\norange, red\r\nred, green\r\n";
             }
         }
-
 
         public static List<MyChip> Failure2
         {
@@ -96,10 +89,9 @@ namespace ColorCombination.Test
                     new MyChip(){Left="red",Right="orange"},
                     new MyChip(){Left="red", Right="green"},
                     new MyChip(){Left="yellow",Right="red"},
-                    new MyChip(){Left="orange", Right="yellow"}      
+                    new MyChip(){Left="orange", Right="yellow"}
                 };
             }
-
         }
 
         public static List<MyChip> Success3
@@ -108,13 +100,11 @@ namespace ColorCombination.Test
             {
                 return new List<MyChip>
                 {
-                    new MyChip(){Left="blue", Right="green"},                   
-                    new MyChip(){Left="blue", Right="green"}      
+                    new MyChip(){Left="blue", Right="green"},
+                    new MyChip(){Left="blue", Right="green"}
                 };
             }
-
         }
-
 
         public static string SuccessExpectedOutput3
         {
@@ -130,11 +120,9 @@ namespace ColorCombination.Test
             {
                 return new List<MyChip>
                 {
-                    new MyChip(){Left="blue", Right="green"}                 
-                        
+                    new MyChip(){Left="blue", Right="green"}
                 };
             }
-
         }
     }
 }
