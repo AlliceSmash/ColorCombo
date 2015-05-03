@@ -8,7 +8,7 @@ namespace ColorCombination
         private int nVertex;
         //total number of edges of this directed graph
         private int nEdge;
-      
+
         //the following visited, edgeTo are for finding a path, which is not necessary a complete path
         //visited = true when the vertex has been visited 
         private bool[] visited;
@@ -37,7 +37,6 @@ namespace ColorCombination
             }
         }
 
-        
         /// <summary>
         /// Add an edge from vertex (from) to vertex(to) by filling adjacentList
         /// Called by AddEdges
@@ -55,7 +54,6 @@ namespace ColorCombination
                 adjacentList[from].Add(to);
                 nEdge++;
             }
-
         }
         
         /// <summary>
@@ -69,52 +67,20 @@ namespace ColorCombination
 
             int i, j;
             //here, the last vertex  is the end chip
-            //does not point to any other vertex          
+            //does not point to any other vertex
             for (i = 0; i < nVertex - 1; i++)
             {
                 MyChip temp = chips[i];
                 for (j = 0; j < nVertex; j++)
                 {
                     if (j != i && temp.Right.Equals(chips[j].Left))
-                    {                     
+                    {
                             AddEdge(i, j);
                     }
                 }
             }
         }
 
-        ////print out the adjacency list for testing purpose
-        //public void PrintAdjacencyList()
-        //{
-        //    int i;
-
-        //    for (i = 0; i < nVertex; i++)
-        //    {
-        //        if (adjacentList[i].Count > 0)
-        //        {
-        //            System.Console.Write("Vertex {0} Links to: ", i.ToString());
-        //            foreach (var item in adjacentList[i])
-        //                System.Console.Write(item.ToString() + " ");
-        //            System.Console.WriteLine();
-        //        }
-
-        //    }
-        //}
-
-        //find directed path to end node
-        //Note: the starting point is predefined as the first vertex, 0
-
-        /// <summary>
-        /// Find directed path from startNode to end
-        /// NOT USED FOR COLOR COMBINATION PROBLEM
-        /// </summary>
-        public void FindDirectedPath()
-        {
-            visited = new bool[nVertex];
-            edgeTo = new int[nVertex];
-            Finddirectpath(startNode);
-        }
-        
         /// <summary>
         /// Called by FindDirectedPath
         /// to find direct path from vertex v to end 
@@ -201,7 +167,7 @@ namespace ColorCombination
             FindCompletePath(next, remaining);
             return (remaining.Count == 0);
         }
-               
+
         /// <summary>
         /// Test if vertex v can be linked from the start point
         /// </summary>
@@ -221,10 +187,8 @@ namespace ColorCombination
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
         /// <summary>

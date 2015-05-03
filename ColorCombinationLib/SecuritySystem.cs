@@ -56,20 +56,16 @@ namespace ColorCombination
                 {
                     //found combination,return the combination
                     return PrintColorCombination();
+                }
 
-                }
-                else
-                {
                     return failureMsg;
-                }
             }
-            else 
+            else
             {
                 return failureMsg;
             }
         }
 
-        
         /// <summary>
         /// Using graph's adjacent list to facilitate finding a color combination
         /// </summary>
@@ -96,15 +92,12 @@ namespace ColorCombination
 
                     return PrintColorCombination();
                 }
-                else
-                {
                     return failureMsg;
-                }
             }
             else
             {
                 return failureMsg;
-            } 
+            }
         }
 
         /// <summary>
@@ -119,7 +112,8 @@ namespace ColorCombination
             {
                 return false;
             }
-            else return true;
+
+            return true;
         }
 
         /// <summary>
@@ -141,7 +135,6 @@ namespace ColorCombination
             return true;
         }
 
-        
         /// <summary>
         /// Find complete path, called by findMasterCombination
         /// startChip should not be part of chipsToSort
@@ -162,7 +155,6 @@ namespace ColorCombination
             }
         }
 
-         
         /// <summary>
         /// Called by findCompletePath(MyChip, List<MyChip>)
         /// if find a complete path, return true and sortResult will be filled
@@ -181,7 +173,6 @@ namespace ColorCombination
             else return false;
         }
 
-         
         /// <summary>
         /// Called by completePathFound only if the previous chip can link to the next chip
         /// </summary>
@@ -198,13 +189,9 @@ namespace ColorCombination
                 sortResults.Remove(next);
                 return false;
             }
-            else
-            {
                 return true;
-            }
         }
 
-        
         /// <summary>
         /// Map sortResults to a string for printing purpose
         /// </summary>
